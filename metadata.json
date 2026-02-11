@@ -1,0 +1,5 @@
+{
+  "name": "ARCHIVE",
+  "description": "An offline-first reading app with a Metro-inspired design. Sideload and read your favorite books and customize fonts for a distraction-free reading experience.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARCHIVE</title>
+    <meta name="theme-color" content="#111111" />
+    <meta name="description" content="An offline-first reading app with a Metro-inspired design.">
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <!-- Local CSS (Tailwind) -->
+    <link rel="stylesheet" href="/index.css">
+    <!-- Local Fonts (Web Safe fallback until we download them) -->
+    <style>
+       /* Font face declarations will be added to index.css or here once downloaded */
+    </style>
+  </head>
+  <body class="bg-background-dark text-white overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+        // Basic service worker registration checks
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js', { scope: '/' });
+            });
+        }
+    </script>
+  </body>
+</html>
