@@ -24,6 +24,11 @@ export default defineConfig(({ mode }) => {
           short_name: 'ARCHIVE',
           description: 'An offline-first reading app with a Metro-inspired design.',
           theme_color: '#111111',
+          start_url: '/archive/index.html',
+          scope: '/archive/',
+          display: 'standalone',
+          orientation: 'portrait',
+          background_color: '#111111',
           icons: [
             {
               src: 'icon-192.png',
